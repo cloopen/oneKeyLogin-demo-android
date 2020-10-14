@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">容联一键登录</string>
+    <string name="sdktitle">sdk v1.0.0 demo</string>
+    <string name="debug_text">通过优化验证流程,帮助企业从根源上有效防止用户流失,提升用户体验,让用户享受到瞬间完成验证的体验。</string>
+    <string name="btn_login_success_info">登录成功</string>
+    <string name="btn_return_main">返回首页</string>
+    <string name="okl_debug">一键登录-调试容联</string>
+    <string name="okl_demo_full">一键登录/全屏</string>
+    <string name="okl_demo_popup">一键登录/弹窗</string>
+    <string name="phone_validate_demo">本机号码认证</string>
+
+    <string name="btn_phone_auth">本机号码一键认证</string>
+    <string name="title_activity_phone_auth">PhoneAuthActivity</string>
+
+    <string name="tip_txt_phone_auth">请输入本机号码</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>

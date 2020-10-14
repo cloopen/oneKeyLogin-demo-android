@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/okl_main"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn_one_key_login"
+            style="@style/ButtonBlack"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:text="一键登录" />
+
+
+        <Button
+            android:id="@+id/btn_phone_validate"
+            style="@style/ButtonNormal"
+            android:layout_below="@+id/btn_one_key_login"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_btn_verify"
+            android:textColor="#FFFFFF"
+            android:text="本机号码验证" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_above="@id/layout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/layout_logo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/iv_verification"
+                android:layout_marginRight="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleY="0.5"
+                android:scaleX="0.5"
+                android:src="@drawable/main_logo"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="您的新一代\n\n身份验证解决方案"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/progressbar"
+        android:gravity="center"
+        android:background="@color/color40black">
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/loading_gif"/>
+    </LinearLayout>
+-->
+
+</RelativeLayout>

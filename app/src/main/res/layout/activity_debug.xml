@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".activity.DebugActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/sdktitle"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/demo_debug_top_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="-12dp"
+            android:layout_marginRight="18dp"
+            android:layout_weight="8"
+            android:background="@drawable/demo_debug_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/demo_check_message_init"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="25dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/debug_text"
+                        android:textColor="#F9F9F9"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/demo_check_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="10dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textColor="#F9F9F9"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="5">
+
+            <RelativeLayout
+                android:id="@+id/layout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_time"
+                android:layout_alignParentBottom="true">
+                <Button
+                    android:id="@+id/demo_sdk_init"
+                    style="@style/ButtonNormal"
+                    android:layout_marginTop="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="1.SDK初始化" />
+
+                <Button
+                    android:id="@+id/demo_sdk_pre"
+                    style="@style/ButtonNormal"
+                    android:layout_below="@+id/demo_sdk_init"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="2.SDK预取号" />
+
+                <Button
+                    android:id="@+id/demo_sdk_login"
+                    style="@style/ButtonNormal"
+                    android:layout_below="@+id/demo_sdk_pre"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="3.拉起授权页" />
+            </RelativeLayout>
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/demo_loading_view"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/demo_loading"></ImageView>
+    </FrameLayout>
+</RelativeLayout>

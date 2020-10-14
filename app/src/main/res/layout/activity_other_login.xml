@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.OtherLoginActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dip">
+        <ImageButton
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:onClick="returnBt"
+            android:layout_marginLeft="12dip"
+            android:src="@drawable/okl_left_return"
+            android:layout_width="24dip"
+            android:layout_height="24dip"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/other_text"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

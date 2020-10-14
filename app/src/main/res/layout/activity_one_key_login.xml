@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:id="@+id/one_key_login_layout"
+    >
+    <RelativeLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="vertical"
+        android:background="@drawable/shape_time"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/btn_login_full"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="38dp"
+            android:background="@drawable/demo_auth_bt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="一键登录/全屏"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <ProgressBar
+                android:id="@+id/login_full_loading"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="12dp"
+                android:indeterminateBehavior="repeat"
+                android:indeterminateDrawable="@drawable/demo_loading_anim"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_login_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_login_full"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="38dp"
+            android:background="@drawable/demo_auth_bt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="一键登录/弹窗"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <ProgressBar
+                android:id="@+id/login_dialog_loading"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="12dp"
+                android:indeterminateBehavior="repeat"
+                android:indeterminateDrawable="@drawable/demo_loading_anim"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_login_debug"
+            style="@style/ButtonNormal"
+            android:layout_below="@+id/btn_login_dialog"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_btn_verify"
+            android:textColor="#3A51FF"
+            android:text="一键登录/调试" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_btn"
+        android:weightSum="10"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_intr"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="9"
+            android:scaleType="fitXY"
+            android:src="@drawable/okl_2" />
+        <TextView
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="一键认证，提高用户体验"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
