@@ -58,7 +58,7 @@ RLOklSdk.x.x.x.arr
 
  如何导入SDK，以1.0.3版本的SDK为例（其他版本SDK导入方式一致），如图所示：
 
-![Image](https://github.com/cloopen/Images/blob/main/Android/%E9%85%8D%E7%BD%AEsdk.jpg)
+![Image](https://raw.githubusercontent.com/cloopen/Images/main/Android/setting_sdk.jpg)
 
 **3.3.2 在项⽬的build.gradle下添加如下代码：**
 
@@ -174,7 +174,7 @@ implementation(name: 'RLOKlSdk.x.x.x', ext: 'aar')
 
 请在build.gradle中添加相应配置：
 
-![Image](https://github.com/cloopen/Images/blob/main/Android/%E9%85%8D%E7%BD%AE%E7%AD%BE%E5%90%8D.jpg)
+![Image](https://raw.githubusercontent.com/cloopen/Images/main/Android/setting_sign.jpg)
 
 #### 3.4.4 混淆配置规则
 
@@ -461,7 +461,7 @@ data:
 
 ### 5.1授权页说明
 
-![Image](https://github.com/cloopen/Images/blob/main/Android/%E9%85%8D%E7%BD%AE%E9%A1%B5%E9%9D%A2.jpg)
+![Image](https://raw.githubusercontent.com/cloopen/Images/main/Android/settting_activity.jpg)
 
 <font color=red>注意：开发者不得通过任何技术手段将授权页面的隐私协议栏、slogan隐藏或者覆盖，对于接入其他认证SDK并上线的应用，我方会对上线的应用授权页面做审查，如果发现未按要求设计授权页面，将关闭应用的一键登录服务。</font>
 
