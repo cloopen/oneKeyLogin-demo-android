@@ -2,9 +2,12 @@
 ## ⼀. 概述
 
 **容联云一键登录SDK 为移动应用提供完善的三网（移动、联通、电信）一键登录功能开发框架，屏蔽其内部复杂细节，对外提供较为简洁的 API 接口，方便第三方应用快速集成一键登录功能。
-当前工程目录oneKeyLogin-demo-android/ onekeylogindemo 为容联云一键登录Demo，oneKeyLogin-demo-android/sdk为sdk存放处，用户可根据需要下载相应文件。**
+当前工程目录（oneKeyLogin-demo-android/onekeylogindemo）为容联云一键登录Demo，当前工程目录（oneKeyLogin-demo-android/sdk）为sdk存放处，用户可根据需要下载相应文件。**
 
-当前版本：1.0.6
+**SDK简要**
+
+SDK当前版本：1.0.6
+
 下载工程后进行解压，解压后可在oneKeyLogin-demo-android/sdk文件夹下获取：
 
 RLOklSdk.x.x.x.arr
@@ -25,7 +28,7 @@ RLOklSdk.x.x.x.arr
 
 ## 二. Demo快速体验
 
-**用户可在当前工程目录oneKeyLogin-demo-android/ onekeylogindemo 获取容联云一键登录Demo**
+**用户可在当前工程目录（oneKeyLogin-demo-android/onekeylogindemo）获取容联云一键登录Demo**
 
 <font color=#ff00 size=3>**注：**</font>
 
