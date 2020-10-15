@@ -58,7 +58,7 @@ RLOklSdk.x.x.x.arr
 
  如何导入SDK，以1.0.3版本的SDK为例（其他版本SDK导入方式一致），如图所示：
 
-![Image](https://raw.githubusercontent.com/cloopen/Images/main/Android/setting_sdk.jpg)
+![Image](https://www.yuntongxun.com/static/sms/img/pic_banner_title.png)
 
 **3.3.2 在项⽬的build.gradle下添加如下代码：**
 
