@@ -2,7 +2,7 @@
 ## ⼀. 概述
 
 **容联云一键登录SDK 为移动应用提供完善的三网（移动、联通、电信）一键登录功能开发框架，屏蔽其内部复杂细节，对外提供较为简洁的 API 接口，方便第三方应用快速集成一键登录功能。
-当前工程目录（oneKeyLogin-demo-android/onekeylogindemo）为容联云一键登录Demo，当前工程目录（oneKeyLogin-demo-android/sdk）为sdk存放处，用户可根据需要下载相应文件。**
+当前工程目录（oneKeyLogin-demo-android/onekeylogindemo）为容联云一键登录Demo，当前工程目录（oneKeyLogin-demo-android/sdk）为sdk与开发说明文档存放处，用户可根据需要下载相应文件。**
 
 **SDK简要**
 
@@ -56,9 +56,7 @@ RLOklSdk.x.x.x.arr
 
 **3.3.1 将解压后的RLOklSdk.x.x.x.arr文件导入您工程下的libs目录下。arr版本号以实际版本为准；**
 
- 如何导入SDK，以1.0.3版本的SDK为例（其他版本SDK导入方式一致），如图所示：
-
-![Image](https://www.yuntongxun.com/static/sms/img/pic_banner_title.png)
+ 如有疑问可在目标（oneKeyLogin-demo-android/sdk/onekeyLogin-Androidxxx.pdf）中查看pdf版开发说明文档。
 
 **3.3.2 在项⽬的build.gradle下添加如下代码：**
 
@@ -174,7 +172,23 @@ implementation(name: 'RLOKlSdk.x.x.x', ext: 'aar')
 
 请在build.gradle中添加相应配置：
 
-![Image](https://raw.githubusercontent.com/cloopen/Images/main/Android/setting_sign.jpg)
+```
+//配置相应的签名  密钥与容联注册时提供的请保持一致
+    signingConfigs {
+        release {
+            storeFile file('C:\\xxx.keystore')
+            storePassword '******'
+            keyAlias = 'xxx'
+            keyPassword '******'
+        }
+        debug {
+            storeFile file('C:\\xxx.keystore')
+            storePassword '******'
+            keyAlias = 'xxx'
+            keyPassword '******'
+        }
+    }
+```
 
 #### 3.4.4 混淆配置规则
 
@@ -461,7 +475,8 @@ data:
 
 ### 5.1授权页说明
 
-![Image](https://raw.githubusercontent.com/cloopen/Images/main/Android/settting_activity.jpg)
+
+ 详情可在目标（oneKeyLogin-demo-android/sdk/onekeyLogin-Androidxxx.pdf）中查看pdf版开发说明文档。
 
 <font color=red>注意：开发者不得通过任何技术手段将授权页面的隐私协议栏、slogan隐藏或者覆盖，对于接入其他认证SDK并上线的应用，我方会对上线的应用授权页面做审查，如果发现未按要求设计授权页面，将关闭应用的一键登录服务。</font>
 
