@@ -1,9 +1,11 @@
-# ⼀. 概述
+# 容联云一键登录Android_Demo
+## ⼀. 概述
 
-**容联云一键登录SDK 为移动应用提供完善的三网（移动、联通、电信）一键登录功能开发框架，屏蔽其内部复杂细节，对外提供较为简洁的 API 接口，方便第三方应用快速集成一键登录功能。**
+**容联云一键登录SDK 为移动应用提供完善的三网（移动、联通、电信）一键登录功能开发框架，屏蔽其内部复杂细节，对外提供较为简洁的 API 接口，方便第三方应用快速集成一键登录功能。
+当前工程目录oneKeyLogin-demo-android/ onekeylogindemo 为容联云一键登录Demo，oneKeyLogin-demo-android/sdk为sdk存放处，用户可根据需要下载相应文件。**
 
-当前版本：1.0.5
-下载SDK后进行解压，解压后获取：
+当前版本：1.0.6
+下载工程后进行解压，解压后可在oneKeyLogin-demo-android/sdk文件夹下获取：
 
 RLOklSdk.x.x.x.arr
 
@@ -21,7 +23,9 @@ RLOklSdk.x.x.x.arr
 
    
 
-# 二. Demo快速体验
+## 二. Demo快速体验
+
+**用户可在当前工程目录oneKeyLogin-demo-android/ onekeylogindemo 获取容联云一键登录Demo**
 
 <font color=#ff00 size=3>**注：**</font>
 
@@ -30,7 +34,7 @@ RLOklSdk.x.x.x.arr
 
 
 
-# 三. 接入SDK的工作配置
+## 三. 接入SDK的工作配置
 
 ### 3.1 前期准备
 
@@ -51,7 +55,7 @@ RLOklSdk.x.x.x.arr
 
  如何导入SDK，以1.0.3版本的SDK为例（其他版本SDK导入方式一致），如图所示：
 
-![Image](https://raw.githubusercontent.com/cloopen/Image/main/1.png)
+![Image](https://github.com/cloopen/Images/blob/main/Android/%E9%85%8D%E7%BD%AEsdk.jpg)
 
 **3.3.2 在项⽬的build.gradle下添加如下代码：**
 
@@ -167,7 +171,7 @@ implementation(name: 'RLOKlSdk.x.x.x', ext: 'aar')
 
 请在build.gradle中添加相应配置：
 
-![Image](https://raw.githubusercontent.com/cloopen/Image/main/2.png)
+![Image](https://github.com/cloopen/Images/blob/main/Android/%E9%85%8D%E7%BD%AE%E7%AD%BE%E5%90%8D.jpg)
 
 #### 3.4.4 混淆配置规则
 
@@ -180,7 +184,7 @@ implementation(name: 'RLOKlSdk.x.x.x', ext: 'aar')
 
 
 
-# 四. SDK接口说明
+## 四. SDK接口说明
 
 ### 4.1初始化
 
@@ -450,11 +454,11 @@ data:
 
 
 
-# 五. 授权页面设计
+## 五. 授权页面设计
 
 ### 5.1授权页说明
 
-![Image](https://raw.githubusercontent.com/cloopen/Image/main/3.png)
+![Image](https://github.com/cloopen/Images/blob/main/Android/%E9%85%8D%E7%BD%AE%E9%A1%B5%E9%9D%A2.jpg)
 
 <font color=red>注意：开发者不得通过任何技术手段将授权页面的隐私协议栏、slogan隐藏或者覆盖，对于接入其他认证SDK并上线的应用，我方会对上线的应用授权页面做审查，如果发现未按要求设计授权页面，将关闭应用的一键登录服务。</font>
 
@@ -691,7 +695,7 @@ setDialogTheme(boolean isDialogTheme, String dialogWidth, String dialogHeight)
 
 
 
-# 六. 常见问题
+## 六. 常见问题
 
 ### 1. 初始化失败
 
