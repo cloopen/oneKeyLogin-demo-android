@@ -56,7 +56,7 @@ RLOklSdk.x.x.x.arr
 
 **3.3.1 将解压后的RLOklSdk.x.x.x.arr文件导入您工程下的libs目录下。arr版本号以实际版本为准；**
 
- 如有疑问可在目标（oneKeyLogin-demo-android/sdk/onekeyLogin-Androidxxx.pdf）中查看pdf版开发说明文档。
+ 如有疑问可在（oneKeyLogin-demo-android/sdk/onekeyLogin-Androidxxx.pdf）中查看pdf版的开发说明文档。
 
 **3.3.2 在项⽬的build.gradle下添加如下代码：**
 
@@ -476,7 +476,7 @@ data:
 ### 5.1授权页说明
 
 
- 详情可在目标（oneKeyLogin-demo-android/sdk/onekeyLogin-Androidxxx.pdf）中查看pdf版开发说明文档。
+ 详情可在（oneKeyLogin-demo-android/sdk/onekeyLogin-Androidxxx.pdf）中查看pdf版的开发说明文档。
 
 <font color=red>注意：开发者不得通过任何技术手段将授权页面的隐私协议栏、slogan隐藏或者覆盖，对于接入其他认证SDK并上线的应用，我方会对上线的应用授权页面做审查，如果发现未按要求设计授权页面，将关闭应用的一键登录服务。</font>
 
