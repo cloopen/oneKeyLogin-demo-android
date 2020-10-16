@@ -25,8 +25,8 @@
 - **克隆/下载本项目到本地，将Demo导入开发工具编译；**
 - **配置修改build.gradle：**
 
-      1.配置签名
-```
+    1.配置签名
+    ```
     defaultConfig {
         //将build里面的applicationId换成对应的测试包名
         applicationId "xxxxxxx`"
@@ -36,9 +36,9 @@
         versionName "1.0.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-```
+    ```
     2.配置签名
-```
+    ```
     //配置相应的签名(密钥与容联注册时提供的请保持一致)
     signingConfigs {
         release {
@@ -54,9 +54,9 @@
             keyPassword '******'
         }
     }
- ```
+    ```
      3.配置appId
- ```
+     ```
     //配置相应的appId(appId与容联注册时提供的请保持一致)
     buildTypes {
         release {
@@ -66,7 +66,7 @@
             buildConfigField 'String', 'APP_ID', '"******************************"'
         }
     }
-```
+    ```
 
 <font color=#ff00 size=3>**注：**</font>
 
