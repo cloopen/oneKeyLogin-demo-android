@@ -19,7 +19,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.ccop.sms"
+        //将build里面的applicationId换成对应的测试包名
+        applicationId "xxxxxxxxx"
         minSdkVersion 14
         targetSdkVersion 29
         versionCode 3
