@@ -42,7 +42,7 @@ android {
             signingConfig signingConfigs.debug
             //子账号Id
             buildConfigField 'String', 'APP_ID', '""******************************""'
-            //用户后台服务器地址，如暂不校验，可注释
+            //用户后台服务器地址，用于校验用户是否登录成功（用户可根据自己的业务去配置相关后台地址信息及代码中的业务逻辑），如暂不校验，可注释
             //buildConfigField 'String', 'SERVER_URL', '""******************************""'
         }
     }
