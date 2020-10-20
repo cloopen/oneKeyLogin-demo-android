@@ -27,7 +27,7 @@ android {
         versionName "1.0.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    //配置相应的appId
+    //配置相应的appId（即子账号Id）
     buildTypes {
         release {
 //            debuggable true  //true代表开启  false 关闭
@@ -40,8 +40,10 @@ android {
         debug {
             minifyEnabled false
             signingConfig signingConfigs.debug
+            //子账号Id
             buildConfigField 'String', 'APP_ID', '""******************************""'
-            buildConfigField 'String', 'SERVER_URL', '""******************************""'
+            //用户后台服务器地址，如暂不校验，可注释
+            //buildConfigField 'String', 'SERVER_URL', '""******************************""'
         }
     }
 
