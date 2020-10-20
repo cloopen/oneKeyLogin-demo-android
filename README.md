@@ -55,7 +55,7 @@
         }
     }
     ```
-     3.配置appId
+     3.配置appId（即子账号Id）
      ```
     //配置相应的appId(appId与容联注册时提供的请保持一致)
     buildTypes {
@@ -72,7 +72,7 @@
 
 - <font color=#ff00 size=3>建议使用Android Studio2.3及以上版本。</font>
 - <font color=#ff00 size=3>确保已在容联服务端开通并申请了一键登录服务，获取到了相应的appID。</font>
-- <font color=#ff00 size=3>替换 **build.gradle(app)** 文件中 **APP_ID** 的值为申请的appID，并确保此appID和应用包名相对应。</font>
+- <font color=#ff00 size=3>替换 **build.gradle(app)** 文件中 **APP_ID** 的值为申请的appID（即子账号Id），并确保此appID和应用包名相对应。</font>
 
 ### 接入及查看SDK配置、接口说明、授权界面设计、常见问题及返回码等
 
