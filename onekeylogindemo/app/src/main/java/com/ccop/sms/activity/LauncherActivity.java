@@ -81,9 +81,9 @@ public class LauncherActivity extends AppCompatActivity {
 
     //判断程序是否第一次运行
     private boolean isFirst() {
-        boolean isFirst = ShareUtils.getBoolean(this, SHARE_IS_FIRST, true);
+        boolean isFirst = (boolean) ShareUtils.getParam(this, SHARE_IS_FIRST, true);
         if (isFirst) {
-            ShareUtils.putBoolean(this, SHARE_IS_FIRST, false);
+            ShareUtils.saveParam(this, SHARE_IS_FIRST, false);
             //是第一次运行
             return true;
         } else {

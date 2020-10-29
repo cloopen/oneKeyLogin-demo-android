@@ -17,6 +17,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @ProjectName: Okl Demo
@@ -38,6 +40,16 @@ public class Utils {
             //合规
             return true;
         }
+    }
+    public static boolean validataPhonNumb(String phone) {
+        String telRegex = "[1][3456789]\\d{9}";
+        Pattern pattern = Pattern.compile(telRegex);
+        Matcher matcher = pattern.matcher(phone);
+        boolean b = matcher.matches();
+        if (!b) {
+            return false;
+        }
+        return true;
     }
 
     public static void tokenValidate(Context context, final String appId, final String token, final OneKeyLoginListener listener){

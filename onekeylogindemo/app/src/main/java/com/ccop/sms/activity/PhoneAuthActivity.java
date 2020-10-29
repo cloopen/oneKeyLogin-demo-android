@@ -74,7 +74,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements View.OnClick
             Toast.makeText(context, "请输入手机号", Toast.LENGTH_SHORT).show();
             return;
         }
-        boolean checkFlag= Utils.checkPhoneNum(phone);
+        boolean checkFlag= Utils.validataPhonNumb(phone);
         if(!checkFlag){
             Toast.makeText(context, "请输入正确的手机号", Toast.LENGTH_SHORT).show();
             return;
@@ -85,7 +85,8 @@ public class PhoneAuthActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void phoneAuthResult(String code, final String data) {
                 Log.e(TAG,"Token of phone auth,code:"+code + ",data:"+data);
-                if(code.equals("000000")){//获取成功
+                //开发者已成功对接SDK,获取token
+                if(code.equals("000000")){
                     try {
                         JSONObject json = new JSONObject(data);
 //                        int operator = json.optInt("operatorType");
@@ -101,7 +102,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements View.OnClick
                             }
                         });
 
-                        //此处开发者可自行配置服务器地址及参数逻辑进行后台token校验  核对是否号码一致
+                        //此处开发者可自行配置（自己）服务器地址及参数逻辑进行后台token校验  核对是否号码一致
 //                        phoneValidate( BuildConfig.APP_ID, token,phone, new PhoneAuthListener() {
 //                            @Override
 //                            public void phoneAuthResult(String code, final String msg) {

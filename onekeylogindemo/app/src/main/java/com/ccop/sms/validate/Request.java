@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.ccop.sms.BuildConfig;
 import com.ccop.sms.util.Constant;
+import com.ccop.sms.util.ShareUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -222,6 +223,42 @@ public class Request {
             }
         });
     }
+    public  void doSMSVerificationCommonRequest(final String url, final SMSVerificationParam params, final RequestCallback callback) {
+        Log.e(TAG, "request https url : " + url + ">>>>>>> PARAMS : " + params.toJson().toString());
+        new HttpUtils().requestHttp(url, params.toJson().toString(),  new HttpUtils.Response() {
+            @Override
+            public void onSuccess(String result) {
+                ShareUtils.saveParam(mContext,"captcha",params.getCaptcha());
+                ShareUtils.saveParam(mContext,"mobile",params.getMobile());
+                ShareUtils.saveParam(mContext,"sms_time",System.currentTimeMillis());
+                Log.e(TAG, "request success , url : " + url + ">>>>result : " + result);
+                try {
+                    JSONObject json = new JSONObject(result);
+                    callback.onRequestComplete(json.optString("statusCode"), json.optString("statusMsg"), json);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    onError("102223", "数据解析异常");
+                }
+            }
+
+            @Override
+            public void onError(String errorCode, String msg) {
+
+                JSONObject object = new JSONObject();
+                try {
+                    object.put("resultCode", errorCode);
+                    object.put("desc", msg);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                Log.e(TAG, "request failed , url : " + url
+                        + ">>>>>errorMsg : " + object.toString());
+                if (callback != null) {
+                    callback.onRequestComplete(errorCode, msg, object);
+                }
+            }
+        });
+    }
     //一键登录
     public void tokenValidate(Bundle values, RequestCallback callback) {
 
@@ -229,7 +266,7 @@ public class Request {
         param.setAppId(values.getString("appId"));
         param.setToken(values.getString("token"));
 
-        String url = BuildConfig.SERVER_URL+Constant.HTTP_TOKEN_URL;
+        String url = "BuildConfig.SERVER_URL"+Constant.HTTP_TOKEN_URL;
         doCommonRequest(url, param, callback);
     }
     //本机号码认证
@@ -239,8 +276,15 @@ public class Request {
         param.setAppId(values.getString("appId"));
         param.setToken(values.getString("token"));
         param.setMobile(values.getString("mobile"));
-        String url = BuildConfig.SERVER_URL+Constant.HTTP_PHONE_URL;
+        String url = "BuildConfig.SERVER_URL"+Constant.HTTP_PHONE_URL;
         doPhoneAuthCommonRequest(url, param, callback);
     }
-
+    //短信验证码登录
+    public void smsValidate(Bundle values, RequestCallback callback) {
+        SMSVerificationParam param = new SMSVerificationParam();
+        param.setAppId(values.getString("appId"));
+        param.setMobile(values.getString("mobile"));
+        String url = "BuildConfig.SERVER_URL"+Constant.HTTP_SMS_URL;
+        doSMSVerificationCommonRequest(url, param, callback);
+    }
 }

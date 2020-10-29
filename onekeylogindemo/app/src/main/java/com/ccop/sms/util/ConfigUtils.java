@@ -2,13 +2,12 @@ package com.ccop.sms.util;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.ccop.sms.R;
 import com.ccop.sms.activity.OtherLoginActivity;
+import com.ccop.sms.activity.SMSVerificationActivity;
 import com.cloopen.okl.sdk.config.AuthUIConfig;
 import com.cloopen.okl.sdk.listener.OtherLoginInterface;
 
@@ -65,7 +64,7 @@ public class ConfigUtils {
                     @Override
                     public void onClick(View v) {
                         //设置点击事件
-                        Toast.makeText(context, "其他登陆方式", Toast.LENGTH_SHORT).show();
+                        context.startActivity(new Intent(context, SMSVerificationActivity.class));
                     }
                 })
                 //设置隐私协议选择框样式
@@ -80,6 +79,8 @@ public class ConfigUtils {
                 .setPrivacyUnCheckedToastText("请同意服务条款")
                 //设置第三方登录 不显示可以不设置默认不显示、点击事件QQ、微信、微博
                 .setIsShowOtherLogin(true,new OtherOnClick(context,"QQ登录"),new OtherOnClick(context,"微信登录"),new OtherOnClick(context,"微博登录"))
+                //新加配置登录Activity进入动画和退出动画 （不选则系统默认）
+//                .setActivityTransition(R.anim.in_activity,R.anim.out_activity)
                 ;
         return configBuilder.build();
     }
@@ -120,7 +121,7 @@ public class ConfigUtils {
                     @Override
                     public void onClick(View v) {
                         //设置点击事件
-                        Toast.makeText(context, "其他登陆方式", Toast.LENGTH_SHORT).show();
+                        context.startActivity(new Intent(context, SMSVerificationActivity.class));
                     }
                 })
                 .setLogBtnLayout("unicom_one_login_btn_normal", 260, 42, 170)
@@ -131,8 +132,8 @@ public class ConfigUtils {
                 .setPrivacyClauseText("《应用自定义服务条款一》", "https://aim-mobileauth.yuntongxun.com/okl/okl.html")
                 .setPrivacyLayout(10)
                 .setPrivacyClauseView(0xFFA8A8A8, 0xFF74cb26, 10)
-                .setPrivacyUnCheckedToastText("请同意服务条款")
-                ;
+                .setPrivacyUnCheckedToastText("请同意服务条款");
+//                .setActivityTransition(R.anim.in_activity,R.anim.out_activity);
         return configBuilder.build();
     }
 }

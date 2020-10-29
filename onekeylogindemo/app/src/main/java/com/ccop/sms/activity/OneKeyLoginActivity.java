@@ -102,7 +102,8 @@ public class OneKeyLoginActivity extends Activity implements View.OnClickListene
             public void loginResult(final String code, final String data) {
                 Log.e(TAG,"login result,code:"+code + ",data:"+data);
                 try {
-                    if (code.equals("000000")) {//成功获取token
+                    //开发者已成功对接SDK,获取token
+                    if (code.equals("000000")) {
                         final JSONObject object = new JSONObject(data);
                         Log.d(TAG,"token="+object.optString("token"));
                         OneKeyLoginActivity.this.runOnUiThread(new Runnable() {
@@ -115,7 +116,7 @@ public class OneKeyLoginActivity extends Activity implements View.OnClickListene
                             }
                         });
 
-                        //此处开发者可自行配置服务器地址及参数逻辑进行后台校验
+                        //此处开发者可自行配置（自己）服务器地址及参数逻辑进行后台校验
 //                        Utils.tokenValidate(context, BuildConfig.APP_ID, object.optString("token"), new OneKeyLoginListener() {
 //                            @Override
 //                            public void oneKeyLoginResult(final String code, final String msg) {

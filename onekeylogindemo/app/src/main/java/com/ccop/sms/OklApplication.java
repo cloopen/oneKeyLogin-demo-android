@@ -3,6 +3,7 @@ package com.ccop.sms;
 import android.app.Application;
 import android.util.Log;
 
+import com.cloopen.okl.sdk.BuildConfig;
 import com.cloopen.okl.sdk.OneKeyLoginHelper;
 import com.cloopen.okl.sdk.listener.InitListener;
 
@@ -40,6 +41,8 @@ public class OklApplication extends Application {
                 Log.e(TAG,"初始化结果,code:"+code +",data:"+data);
             }
         });
+        //清除缓存
+        OneKeyLoginHelper.getInstance().setClearData(this);
     }
 
 }

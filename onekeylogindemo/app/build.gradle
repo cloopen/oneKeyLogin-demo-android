@@ -24,7 +24,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 29
         versionCode 3
-        versionName "1.0.6"
+        versionName "1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     //配置相应的appId（即子账号Id）
@@ -41,14 +41,12 @@ android {
             minifyEnabled false
             signingConfig signingConfigs.debug
             //子账号Id
-            buildConfigField 'String', 'APP_ID', '""******************************""'
+            buildConfigField 'String', 'APP_ID', '"******************************"'
             //用户后台服务器地址，用于校验用户是否登录成功（用户可根据自己的业务去配置相关后台地址信息及代码中的业务逻辑），如暂不校验，可注释
-            //buildConfigField 'String', 'SERVER_URL', '""******************************""'
+//            buildConfigField 'String', 'SERVER_URL', '""******************************""'
         }
     }
-
 }
-
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
@@ -61,7 +59,7 @@ dependencies {
     //1.导入容联SDK的aar包，并配置implementation
 //    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation(name: 'RLOKlSdk.1.0.6', ext: 'aar')
+    implementation(name: 'RLOKlSdk.1.1.0', ext: 'aar')
 }
 repositories {
     flatDir {

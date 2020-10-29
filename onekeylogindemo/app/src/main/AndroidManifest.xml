@@ -39,7 +39,8 @@
         <activity
             android:name=".activity.GuideActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.DebugActivity" /> <!-- 核心配置及授权页配置 -->
+        <activity android:name=".activity.DebugActivity" />
+        <activity android:name=".activity.SMSVerificationActivity"/>
 
         <activity
             android:name=".util.PermissionUtils$PermissionActivity"
@@ -49,7 +50,7 @@
 <!--            android:name="com.cloopen.okl.sdk.view.OneLoginActivity"-->
 <!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
 <!--            android:launchMode="singleTop" />-->
-
+        <!-- SDK核心配置及授权页配置 -->
         <activity
             android:name="com.cloopen.okl.sdk.view.CmccLoginActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -106,8 +107,8 @@
 
     </application>
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序改变网络连接状态 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取imsi用于判断双卡和换卡 -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 获取imsi用于判断双卡和换卡 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于判断双卡和换卡 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于判断双卡和换卡 -->
     <!-- 允许应用读写用户的外部存储器 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 打电话权限 -->
